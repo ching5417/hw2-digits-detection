@@ -11,7 +11,7 @@ The following specs were used to create the original solution.
 To reproduct the training and testing process, do the following steps:
 1. [Installation](#installation)
 2. [Training](#training)
-6. [Make Submission](#make-submission)
+3. [Make Submission](#make-submission)
 
 ## Installation
 All requirements should be detailed in requirements.txt. Using Anaconda is strongly recommended.
@@ -29,13 +29,14 @@ To train models, run following commands.
 ```
 $ cd yolov5/
 $ python train.py \
-  [--img] \
-  [--batch] \
-  [--epochs] \
-  [--data] \
-  [--weights] \
-  [--device]
+  --img \
+  --batch \
+  --epochs \
+  --data \
+  --weights {YOLOv5s, YOLOv5m, YOLOv5l, YOLOv5x} \
+  --device
 ```
+ex: `python train.py --img 640 --batch 16 --epochs 30 --data svhn.yaml --weights yolov5s.pt --device 0`
 After training, the model will save to `/yolov5/runs/train/exp/weights/` folder.
 ```
 model
@@ -55,6 +56,8 @@ $ python test.py \
   --save-txt \
   --save-conf
 ```
+Also can append extra models to the --weights argument to run ensemble inference
+
 After testing, it will output a `0856174.json` in `yolov5/runs/detect/exp/json/` folder.
 
-I also put my testing result in `output/` folder.
+I also put my testing result [here](https://drive.google.com/drive/folders/18wKV9g1UWIW4vQV3HA9PBR3wwX86P61C?usp=sharing).

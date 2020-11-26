@@ -37,6 +37,7 @@ $ python train.py \
   --device
 ```
 ex: `python train.py --img 640 --batch 16 --epochs 30 --data svhn.yaml --weights yolov5s.pt --device 0`
+
 After training, the model will save to `/yolov5/runs/train/exp/weights/` folder.
 ```
 model

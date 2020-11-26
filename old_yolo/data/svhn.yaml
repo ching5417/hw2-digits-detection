@@ -1,0 +1,12 @@
+# download command/URL (optional)
+# download: https://github.com/ultralytics/yolov5/releases/download/v1.0/coco128.zip
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: ../svhn/images/train/
+val: ../svhn/images/val/
+
+# number of classes
+nc: 10
+
+# class names
+names: ['1.0', '2.0', '3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
